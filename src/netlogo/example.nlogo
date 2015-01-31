@@ -30,39 +30,34 @@ ticks
 @#$#@#$#@
 ## WHAT IS IT?
 
-(a general understanding of what the model is trying to show or explain)
+NetLogo extension by [Marshall Abrams](http://members.logical.net/~marshall/) that allows calling [Clojure](http://clojure.org) from NetLogo.
 
-## HOW IT WORKS
-
-(what rules the agents use to create the overall behavior of the model)
 
 ## HOW TO USE IT
 
-(how to use the model, including a description of each of the items in the Interface tab)
+To use, put this in the Code tab in netlogo:
 
-## THINGS TO NOTICE
+	extensions [clojure]
 
-(suggested things for the user to notice while running the model)
+Then you can pass strings containing Clojure code to  `clojure:eval`, which will return a string containing the result of Clojure eval'ing that input.  
 
-## THINGS TO TRY
+The Clojure instance persists once it's loaded, so definitions from earlier calls from NetLogo can be used later:
 
-(suggested things for the user to try to do (move sliders, switches, etc.) with the model)
+	observer> show clojure:eval "(defn foo [x] (* x (inc x)))"
+	observer: "#'clojure.core/foo"
+	observer> show clojure:eval "(foo 2)"
+	observer: "6"
 
-## EXTENDING THE MODEL
+For now, that's it.
 
-(suggested things to add or change in the Code tab to make the model more complicated, detailed, accurate, etc.)
-
-## NETLOGO FEATURES
-
-(interesting or unusual features of NetLogo that the model uses, particularly in the Code tab; or where workarounds were needed for missing features)
-
-## RELATED MODELS
-
-(models in the NetLogo Models Library and elsewhere which are of related interest)
 
 ## CREDITS AND REFERENCES
 
-(a reference to the model's URL on the web if it has one, as well as any other necessary credits, citations, and links)
+Source code, etc.: https://github.com/mars0i/netlogo-clojure
+
+This software is copyright 2015 by [Marshall Abrams](http://members.logical.net/~marshall/), and is distributed under the [Gnu General Public License version 3.0](http://www.gnu.org/copyleft/gpl.html) as specified in the file LICENSE, except where noted.
+
+Thank you to contributors to great free software like [NetLogo](https://ccl.northwestern.edu/netlogo) and [Clojure](http://clojure.org)!
 @#$#@#$#@
 default
 true

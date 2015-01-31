@@ -31,7 +31,7 @@ Or use `make install`.
 Or change to the extensions subdirectory of the NetLogo application
 directory and unzip clojure.zip.  (This file includes Java source files
 for the extension for reference purposes, but if you want to build the
-extension from scratch, you probably want to the original version using
+extension from scratch, you probably want to get the original version using
 `git` from https://github.com/mars0i/netlogo-clojure, because the
 Makefile is there and is set up for the directory structure there.)
 

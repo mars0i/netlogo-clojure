@@ -1,7 +1,7 @@
 # netlogo-clojure
 NetLogo extension that allows calling Clojure from NetLogo
 
-Just in proof-of-concept stage.
+Just in proof-of-concept stage.  Some files will be moved soon.
 
 To install, copy clojure.jar\*, resources/\* and (optionally)
 example.nlogo to a directory that you name 'clojure' in the 'extensions'

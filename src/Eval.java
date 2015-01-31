@@ -17,7 +17,7 @@ public class Eval extends DefaultReporter {
 		try {
 			addPath("extensions/clojure/clojure-1.6.0.jar"); // relative to NetLogo's home dir
 
-			// Will throw extensions without the preceding line
+			// Will throw exceptions without the preceding line
 			IFn cljReadString = Clojure.var("clojure.core", "read-string");
 			IFn cljEval = Clojure.var("clojure.core", "eval");
 

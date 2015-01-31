@@ -4,9 +4,9 @@ NetLogo extension that allows calling Clojure from NetLogo
 Just in proof-of-concept stage.  Experimenting.  Some files will be
 moved to better places soon.
 
-To install, copy clojure.jar\*, resources/\* and (optionally)
-example.nlogo to a directory that you name 'clojure' in the 'extensions'
-subdirectory of your NetLogo installation directory.
+To install, copy *target/\*.jar\**, *resources/\** and (optionally)
+*src/netlogo/example.nlogo* to a directory that you name 'clojure' in
+the 'extensions' subdirectory of your NetLogo installation directory.
 
 Or use `make install`.
 

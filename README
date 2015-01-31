@@ -1,0 +1,19 @@
+To install, copy clojure.jar* and anything else needed a directory names
+'clojure' in the 'extensions' subdirectory of your NetLogo installation
+directory.
+
+To use, put this in the procedures tab in netlogo:
+
+	extensions [clojure]
+
+.........................
+
+To build, export the NETLOGO env var to point to the directory which
+contains the NetLogo.jar you want to use.  This directory must also
+contain a directory named lib which contains scala-library.jar.  The one
+from Scala 2.7.7 won't work, but the one from Scala 2.9.2 will.
+e.g.
+export NETLOGO=~/dist/netlogosrc/NetLogo
+and also
+cd $NETLOGO/lib
+ln -sf ../project/boot/scala-2.9.2/lib/scala-library.jar 

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Extension-Name: clojure
+Class-Manager: EvalExtension
+NetLogo-Extension-API-Version: 5.0

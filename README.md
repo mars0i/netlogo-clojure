@@ -14,4 +14,14 @@ To use, put this in the Code tab in netlogo:
 
 Then you can pass strings containing Clojure code to 
 `clojure:eval`, which will return a string containing the result
-of Clojure eval'ing that input.  For now, that's it.
+of Clojure eval'ing that input.  
+
+The Clojure instance persists once it's loaded, so definitions from
+earlier calls from NetLogo can be used later:
+
+	observer> show clojure:eval "(defn foo [x] (* x (inc x)))"
+	observer: "#'clojure.core/foo"
+	observer> show clojure:eval "(foo 2)"
+	observer: "6"
+
+For now, that's it.

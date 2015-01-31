@@ -8,6 +8,14 @@ To install, copy clojure.jar\*, resources/\* and (optionally)
 example.nlogo to a directory that you name 'clojure' in the 'extensions'
 subdirectory of your NetLogo installation directory.
 
+Or use `make install`.
+
+Or change to the *extensions* subdirectory of NetLogo application
+directory, and unzip clojure.zip.  (This includes Java source files for
+the extension, but if you want to build the extension from scratch, you
+should get the original version from
+https://github.com/mars0i/netlogo-clojure .)
+
 To use, put this in the Code tab in netlogo:
 
 	extensions [clojure]

@@ -1,3 +1,4 @@
-javac -cp /Users/marshall/.m2/repository/org/clojure/clojure/1.6.0/clojure-1.6.0.jar Main.java 
+How to run experiments.java:
 
-java -cp /Users/marshall/.m2/repository/org/clojure/clojure/1.6.0/clojure-1.6.0.jar:. Main
+javac -cp $HOME/.m2/repository/org/clojure/clojure/1.6.0/clojure-1.6.0.jar   Main.java 
+java  -cp $HOME/.m2/repository/org/clojure/clojure/1.6.0/clojure-1.6.0.jar:. Main

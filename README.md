@@ -1,7 +1,26 @@
-# netlogo-clojure
-NetLogo extension that allows calling Clojure from NetLogo
+netlogo-clojure
+====
+
+NetLogo extension by [Marshall
+Abrams](http://members.logical.net/~marshall/) that allows calling
+[Clojure](http://clojure.org) from NetLogo.
 
 Just in proof-of-concept stage.  Experimenting.
+
+Please feel free to contact me with questions, suggestions, etc. at:
+
+	mabrams ([at]) uab [(dot)] edu
+	marshall ([at]) logical [(dot)] net  
+
+### License
+
+This software is copyright 2015 by [Marshall
+Abrams](http://members.logical.net/~marshall/), and is distributed under
+the [Gnu General Public License version
+3.0](http://www.gnu.org/copyleft/gpl.html) as specified in the file
+LICENSE, except where noted.
+
+### Installation
 
 To install, copy target/\*.jar\*, resources/\* and (optionally)
 src/netlogo/example.nlogo to a directory that you name 'clojure' in
@@ -15,6 +34,8 @@ for the extension for reference purposes, but if you want to build the
 extension from scratch, you probably want to the original version using
 `git` from https://github.com/mars0i/netlogo-clojure, because the
 Makefile is there and is set up for the directory structure there.)
+
+### Usage
 
 To use, put this in the Code tab in netlogo:
 

@@ -25,3 +25,13 @@ earlier calls from NetLogo can be used later:
 	observer: "6"
 
 For now, that's it.
+
+#### Note:
+
+*clojure-\<version number\>.jar* is the main Clojure jar file.  This is
+what's needed to run Clojure in any manner at all.
+
+*clojure.jar* is the NetLogo extension jar file.
+
+Similar remarks apply to *\*.jar.pack.gz*, which are needed for Applets.
+

@@ -1,13 +1,9 @@
 import org.nlogo.api.*;
 import java.net.*;
 
-//import java.util.List;
-
 import clojure.java.api.Clojure;
 import clojure.lang.IFn;
 import clojure.pprint.*;
-//import clojure.lang.PersistentHashMap;
-//import clojure.lang.Keyword;
 
 public class Eval extends DefaultReporter {
 
@@ -19,20 +15,23 @@ public class Eval extends DefaultReporter {
 	public Object report(Argument args[], Context context)
 		throws ExtensionException {
 		try {
-			addPath("extensions/clojure/clojure-1.6.0.jar"); // NetLogo is run relative to its home directory, which contains the extensions directory.
+			addPath("extensions/clojure/clojure-1.6.0.jar"); // relative to NetLogo's home dir
 
-			// These will throw extensions without the preceding line, which depends on methods defined below.
+			// Will throw extensions without the preceding line
 			IFn cljReadString = Clojure.var("clojure.core", "read-string");
 			IFn cljEval = Clojure.var("clojure.core", "eval");
-			// IFn cljCLformat = Clojure.var("clojure.pprint", "cl-format"); // doesn't seem to be right--can't use the function below
 
-			String clojInput = args[0].getString();  // whatever NetLogo passed in
-			Object retObj = cljEval.invoke(cljReadString.invoke(clojInput)); // now Clojure-eval it.
+			String clojInput = args[0].getString();  // Whatever NetLogo passed in.
+			Object retObj = cljEval.invoke(cljReadString.invoke(clojInput)); // Now Clojure it.
+
+			// eval returns a null in Java for what's a nil in Clojure.  Need to handle that.
+
+			// Fancy way to convert null back to "nil":
+			//IFn cljCLformat = Clojure.var("clojure.pprint", "cl-format"); // doesn't seem to be right--can't use the function below
 			//Object retObj = cljCLformat.invoke("nil", "~a", cljEval.invoke(cljReadString.invoke(clojInput)));  // throwing unbound function exception
 
 			// Return to NetLogo
-
-			if (retObj == null) {  // cheap kludge because nils become nulls.
+			if (retObj == null) {  // Cheap kludge to convert null to "nil".
 				return "nil";
 			}{
 				return retObj.toString();

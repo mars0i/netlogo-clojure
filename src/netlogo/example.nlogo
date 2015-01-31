@@ -30,7 +30,7 @@ ticks
 @#$#@#$#@
 ## WHAT IS IT?
 
-NetLogo extension by [Marshall Abrams](http://members.logical.net/~marshall/) that allows calling [Clojure](http://clojure.org) from NetLogo.
+Example model for experimenting with NetLogo extension by [Marshall Abrams](http://members.logical.net/~marshall/) that allows calling [Clojure](http://clojure.org) from NetLogo.
 
 
 ## HOW TO USE IT

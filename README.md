@@ -22,11 +22,16 @@ LICENSE, except where noted.
 
 ### Installation
 
+(These instructions are designed for unix-family systems such as OS X
+and Linux.  You'll probably have to make minor changes for for NetLogo
+on Windows.)
+
 To install, copy target/\*.jar\*, resources/\* and (optionally)
 src/netlogo/example.nlogo to a directory that you name 'clojure' in
 the 'extensions' subdirectory of your NetLogo installation directory.
 
-Or use `make install`.
+Or set the environment variable NETLOGO to your NetLogo application
+directory and use `make install`.
 
 Or change to the extensions subdirectory of the NetLogo application
 directory and unzip clojure.zip.  (This file includes Java source files
